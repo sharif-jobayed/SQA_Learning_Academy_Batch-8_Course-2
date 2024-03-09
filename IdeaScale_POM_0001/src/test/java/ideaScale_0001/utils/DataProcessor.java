@@ -9,11 +9,23 @@ public class DataProcessor {
     
     private static final Gson GSON=new Gson();
     private static final File COMMON_DATA=new File("./src/test/java/ideaScale_0001/data/commonData.json");
+    private static final File ENV_SETTINGS=new File("./src/test/java/ideaScale_0001/data/envSettings.json");
 
 
-    public static ProcessedData getProcessedData(){
+    public static ProcessedCommonData getProcessedCommonData(){
         try{
-            return GSON.fromJson(new FileReader(COMMON_DATA),ProcessedData.class);
+            return GSON.fromJson(new FileReader(COMMON_DATA),ProcessedCommonData.class);
+        }catch(Exception e){
+            try {
+                throw new FileNotFoundException(e.getLocalizedMessage());
+            } catch (FileNotFoundException ex) {
+                throw new RuntimeException(ex.getLocalizedMessage());
+            }
+        }
+    }
+    public static ProcessedEnvSettings getProcessedEnvSettings(){
+        try{
+            return GSON.fromJson(new FileReader(ENV_SETTINGS),ProcessedEnvSettings.class);
         }catch(Exception e){
             try {
                 throw new FileNotFoundException(e.getLocalizedMessage());

@@ -1,6 +1,6 @@
 package ideaScale_0001.utils;
 
-public class ProcessedData {
+public class ProcessedCommonData {
 
     private String URL;
     private String AdminEmail;

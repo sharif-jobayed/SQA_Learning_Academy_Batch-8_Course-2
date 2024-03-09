@@ -1,0 +1,12 @@
+
+
+{
+  "FirefoxBrowser": "Firefox",
+  "ChromeBrowser": "Chrome",
+  "EdgeBrowser": "Edge",
+  "WaitingTime": 30,
+
+  "URL": "https://fall-n-rise.ideascaleapp.com/",
+  "AdminEmail": "xi.maxpayne.ix@gmail.com",
+  "AdminPassword": "Spec@1010101"
+}

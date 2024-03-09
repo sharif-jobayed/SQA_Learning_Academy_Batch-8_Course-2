@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
-import static ideaScale_0001.utils.DataProcessor.getProcessedEnvSettings;
+import static ideaScale_0001.utils.DataProcessor.getEnvSettings;
 
 public class DriverTools {
 
@@ -37,7 +37,7 @@ public class DriverTools {
     /*---------Driver assignment done---------*/
 
     public static WebDriverWait getXWait(){
-        return new WebDriverWait(driver, Duration.ofSeconds(getProcessedEnvSettings().getWaitingTime()));
+        return new WebDriverWait(driver, Duration.ofSeconds(getEnvSettings().getWaitingTime()));
     }
     public static Actions getActions(){
         return new Actions(driver);

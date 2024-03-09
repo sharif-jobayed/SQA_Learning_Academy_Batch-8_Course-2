@@ -3,7 +3,7 @@ package ideaScale_0001.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import static ideaScale_0001.utils.DataProcessor.getProcessedCommonData;
+import static ideaScale_0001.utils.DataProcessor.getCommonData;
 
 public class LoginPage extends BasePage{
 
@@ -24,14 +24,14 @@ public class LoginPage extends BasePage{
     }
     public LoginPage enterAdminEmail(){
         WebElement el=getElement(By.id("login-email"));
-        el.sendKeys(getProcessedCommonData().getAdminEmail());
-        Assert.assertEquals(el.getText(),getProcessedCommonData().getAdminEmail(),"Entered user email address is not correct.");
+        el.sendKeys(getCommonData().getAdminEmail());
+        Assert.assertEquals(el.getText(), getCommonData().getAdminEmail(),"Entered user email address is not correct.");
         return this;
     }
     public LoginPage enterAdminPassword(){
         WebElement el=getElement(By.id("login-password"));
-        el.sendKeys(getProcessedCommonData().getAdminPassword());
-        Assert.assertEquals(el.getText(),getProcessedCommonData().getAdminPassword(),"Entered user password is not correct.");
+        el.sendKeys(getCommonData().getAdminPassword());
+        Assert.assertEquals(el.getText(), getCommonData().getAdminPassword(),"Entered user password is not correct.");
         return this;
     }
 

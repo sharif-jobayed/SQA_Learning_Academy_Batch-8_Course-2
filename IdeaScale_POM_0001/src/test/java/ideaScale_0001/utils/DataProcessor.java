@@ -12,7 +12,7 @@ public class DataProcessor {
     private static final File ENV_SETTINGS=new File("./src/test/java/ideaScale_0001/data/envSettings.json");
 
 
-    public static ProcessedCommonData getProcessedCommonData(){
+    public static ProcessedCommonData getCommonData(){
         try{
             return GSON.fromJson(new FileReader(COMMON_DATA),ProcessedCommonData.class);
         }catch(Exception e){
@@ -23,7 +23,7 @@ public class DataProcessor {
             }
         }
     }
-    public static ProcessedEnvSettings getProcessedEnvSettings(){
+    public static ProcessedEnvSettings getEnvSettings(){
         try{
             return GSON.fromJson(new FileReader(ENV_SETTINGS),ProcessedEnvSettings.class);
         }catch(Exception e){

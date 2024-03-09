@@ -7,10 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.sql.Driver;
 import java.time.Duration;
-
 import static ideaScale_0001.utils.DataProcessor.getProcessedEnvSettings;
 
 public class DriverTools {

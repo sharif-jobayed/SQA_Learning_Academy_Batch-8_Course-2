@@ -37,7 +37,7 @@ public class DriverTools {
         setDriver(DriverName);
         return driver;
     }
-    /*---------Driver assignment---------*/
+    /*---------Driver assignment done---------*/
 
     public static WebDriverWait getXWait(){
         return new WebDriverWait(driver, Duration.ofSeconds(getProcessedEnvSettings().getWaitingTime()));

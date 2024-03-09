@@ -1,4 +1,7 @@
 package ideaScale_0001.pages;
 
-public class PageFactory {
+public abstract class PageFactory {
+
+
+
 }

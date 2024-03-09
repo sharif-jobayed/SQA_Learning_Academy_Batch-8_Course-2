@@ -13,7 +13,7 @@ import static ideaScale_0001.utils.DataProcessor.getProcessedEnvSettings;
 public class DriverTools {
 
     /*---------Driver assignment---------*/
-    private static WebDriver driver;
+    public static WebDriver driver;
 
     private static void setDriver(String DriverName){
         switch(DriverName){

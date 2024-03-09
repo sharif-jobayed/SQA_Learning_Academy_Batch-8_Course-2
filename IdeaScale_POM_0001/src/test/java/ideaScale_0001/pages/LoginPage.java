@@ -3,7 +3,6 @@ package ideaScale_0001.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import static ideaScale_0001.utils.DataProcessor.getProcessedCommonData;
 
 public class LoginPage extends BasePage{

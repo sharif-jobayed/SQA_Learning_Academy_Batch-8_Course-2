@@ -3,7 +3,6 @@ package ideaScale_0001.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import static ideaScale_0001.utils.DriverTools.driver;

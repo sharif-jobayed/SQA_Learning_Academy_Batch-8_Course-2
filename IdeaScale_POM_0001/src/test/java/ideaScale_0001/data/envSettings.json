@@ -4,5 +4,5 @@
   "FirefoxBrowser": "Firefox",
   "ChromeBrowser": "Chrome",
   "EdgeBrowser": "Edge",
-  "WaitingTime": 30
+  "WaitingTime": 60
 }

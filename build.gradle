@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group = 'parabank'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// Define the version of Allure you want to use via the allureVersion property
+def allureVersion = "2.24.0"
+// Define the version of AspectJ
+def aspectJVersion = "1.9.20.1"
+
+// Define configuration for AspectJ agent
+configurations {
+    agent
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.18.1'
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation 'org.testng:testng:7.9.0'
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    testImplementation 'com.google.code.gson:gson:2.10.1'
+    // Import allure-bom to ensure correct versions of all the dependencies are used
+    testImplementation platform("io.qameta.allure:allure-bom:$allureVersion")
+    // Add necessary Allure dependencies to dependencies section
+    testImplementation "io.qameta.allure:allure-testng"
+    // Add aspectjweaver dependency
+    agent "org.aspectj:aspectjweaver:$aspectJVersion"
+}
+
+test {
+    useTestNG()
+    // Configure javaagent for test execution
+    jvmArgs = [ "-javaagent:${configurations.agent.singleFile}" ]
+}

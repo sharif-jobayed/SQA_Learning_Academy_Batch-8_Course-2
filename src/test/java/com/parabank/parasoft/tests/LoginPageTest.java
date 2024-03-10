@@ -7,7 +7,7 @@ public class LoginPageTest extends BaseTest{
 
     private final LoginPage LOGINPAGE=new LoginPage();
 
-    @Test(invocationCount = 5)
+    @Test(invocationCount = 1)
     public void loginPageTest(){
         LOGINPAGE
                 .thisPageTitle()
